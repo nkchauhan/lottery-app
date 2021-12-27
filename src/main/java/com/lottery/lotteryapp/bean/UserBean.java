@@ -1,20 +1,19 @@
 package com.lottery.lotteryapp.bean;
 
-import com.sun.istack.NotNull;
 import lombok.Data;
-import org.springframework.lang.NonNull;
+import javax.validation.constraints.NotNull;
 
 @Data
 public class UserBean {
-    @NotNull
+    @NotNull(message = "User Name is required")
     private String userName;
 
-    @NotNull
+    @NotNull(message = "First Name is required")
     private String firstName;
 
     @NotNull
     private String lastName;
 
-    @NotNull
+    @NotNull(message = "Email is required")
     private String email;
 }
