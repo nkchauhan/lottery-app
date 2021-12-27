@@ -1,0 +1,641 @@
+{
+	"info": {
+		"_postman_id": "3159616f-b59b-4194-a66c-01cf42dd67e2",
+		"name": "LotteryApp",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "User Registeration",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"firstName\": \"Nripendra\",\n    \"lastName\": \"Chauhan\",\n    \"userName\": \"nchauha9\",\n    \"email\": \"nk_chauhan@live.in\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/user/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user",
+						"register"
+					]
+				},
+				"description": "User Registeration"
+			},
+			"response": [
+				{
+					"name": "Success: User Registeration",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"firstName\": \"Nripendra\",\n    \"lastName\": \"Chauhan\",\n    \"userName\": \"nchauha9\",\n    \"email\": \"nk_chauhan@live.in\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/user/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"user",
+								"register"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/plain;charset=UTF-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "28"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 25 Dec 2021 07:59:36 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "User Registered successfully"
+				},
+				{
+					"name": "Failure: User already Registered",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"firstName\": \"Nripendra\",\n    \"lastName\": \"Chauhan\",\n    \"userName\": \"nchauha9\",\n    \"email\": \"nk_chauhan@live.in\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/user/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"user",
+								"register"
+							]
+						}
+					},
+					"status": "Internal Server Error",
+					"code": 500,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 25 Dec 2021 08:04:24 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"timestamp\": \"2021-12-25T08:04:24.018+00:00\",\n    \"status\": 500,\n    \"error\": \"Internal Server Error\",\n    \"message\": \"user already exist :: nchauha9\",\n    \"path\": \"/user/register\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Initiate Lottery",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/lottery/initiateLottery?lotteryName=lotteryA",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"lottery",
+						"initiateLottery"
+					],
+					"query": [
+						{
+							"key": "lotteryName",
+							"value": "lotteryA"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Success: Initiate Lottery",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/lottery/initiateLottery?lotteryName=lotteryA",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"lottery",
+								"initiateLottery"
+							],
+							"query": [
+								{
+									"key": "lotteryName",
+									"value": "lotteryA"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 25 Dec 2021 07:36:11 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"lotteryId\": 1,\n    \"lotteryName\": \"lotteryA\",\n    \"startDate\": \"2021-12-25T08:01:58.172+00:00\",\n    \"message\": \"Lottery is Active\"\n}"
+				},
+				{
+					"name": "Failure: Active lottery already present",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/lottery/initiateLottery?lotteryName=lotteryA",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"lottery",
+								"initiateLottery"
+							],
+							"query": [
+								{
+									"key": "lotteryName",
+									"value": "lotteryA"
+								}
+							]
+						}
+					},
+					"status": "Internal Server Error",
+					"code": 500,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 24 Dec 2021 15:10:00 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"timestamp\": \"2021-12-25T08:02:36.765+00:00\",\n    \"status\": 500,\n    \"error\": \"Internal Server Error\",\n    \"message\": \"There is already an active lottery by the name :: lotteryA\",\n    \"path\": \"/lottery/initiateLottery\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Get All Active Lotteries",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/lottery/activeLotteries",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"lottery",
+						"activeLotteries"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Success: Get All Active Lotteries",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/lottery/activeLotteries",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"lottery",
+								"activeLotteries"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 24 Dec 2021 15:14:47 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"lotteryId\": 1,\n        \"lotteryName\": \"lotteryA\",\n        \"startDate\": \"2021-12-24T15:09:58.826+00:00\",\n        \"endDate\": null,\n        \"winnerLotteryNumber\": null\n    },\n    {\n        \"lotteryId\": 2,\n        \"lotteryName\": \"lotteryB\",\n        \"startDate\": \"2021-12-24T15:12:43.567+00:00\",\n        \"endDate\": null,\n        \"winnerLotteryNumber\": null\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Purchase Lottery Ticket by Lottery Id",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/lotteryTicket/submitLottery/1?userName=nchauha9",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"lotteryTicket",
+						"submitLottery",
+						"1"
+					],
+					"query": [
+						{
+							"key": "userName",
+							"value": "nchauha9"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Success: Ticket purchased by Lottery Id",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/lotteryTicket/purchaseLottery/1?userName=nchauha9",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"lotteryTicket",
+								"purchaseLottery",
+								"1"
+							],
+							"query": [
+								{
+									"key": "userName",
+									"value": "nchauha9"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 25 Dec 2021 08:06:26 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 1,\n    \"lotteryId\": 1,\n    \"username\": \"nchauha9\",\n    \"lotteryNumber\": 1,\n    \"date\": \"2021-12-25T08:06:26.868+00:00\"\n}"
+				},
+				{
+					"name": "Success: Purchase multiple tickets for same lottery",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/lotteryTicket/purchaseLottery/1?userName=abc",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"lotteryTicket",
+								"purchaseLottery",
+								"1"
+							],
+							"query": [
+								{
+									"key": "userName",
+									"value": "abc"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 25 Dec 2021 08:19:08 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 2,\n    \"lotteryId\": 1,\n    \"username\": \"abc\",\n    \"lotteryNumber\": 2,\n    \"date\": \"2021-12-25T08:19:08.023+00:00\"\n}"
+				},
+				{
+					"name": "Failure: Invalid user name",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/lotteryTicket/purchaseLottery/1?userName=test",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"lotteryTicket",
+								"purchaseLottery",
+								"1"
+							],
+							"query": [
+								{
+									"key": "userName",
+									"value": "test"
+								}
+							]
+						}
+					},
+					"status": "Internal Server Error",
+					"code": 500,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 25 Dec 2021 08:09:38 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"timestamp\": \"2021-12-25T08:09:38.672+00:00\",\n    \"status\": 500,\n    \"error\": \"Internal Server Error\",\n    \"message\": \"userName not found in db :: test\",\n    \"path\": \"/lotteryTicket/purchaseLottery/1\"\n}"
+				},
+				{
+					"name": "Failure: Cannot purchase ticket for  inactive lottery",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/lotteryTicket/purchaseLottery/4?userName=nchauha9",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"lotteryTicket",
+								"purchaseLottery",
+								"4"
+							],
+							"query": [
+								{
+									"key": "userName",
+									"value": "nchauha9"
+								}
+							]
+						}
+					},
+					"status": "Internal Server Error",
+					"code": 500,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 25 Dec 2021 08:16:16 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"timestamp\": \"2021-12-25T08:16:16.168+00:00\",\n    \"status\": 500,\n    \"error\": \"Internal Server Error\",\n    \"message\": \"Lottery not found for this id :: 4\",\n    \"path\": \"/lotteryTicket/purchaseLottery/4\"\n}"
+				}
+			]
+		},
+		{
+			"name": "End Lottery And Select Random Lottery Winner By Lottery Id Copy",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/lottery/endLotteryAndSelectRandomLotteryWinner/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"lottery",
+						"endLotteryAndSelectRandomLotteryWinner",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Lottery Result by Lottery Id Copy",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/lottery/lotteryResult/44",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"lottery",
+						"lotteryResult",
+						"44"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
